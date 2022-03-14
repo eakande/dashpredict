@@ -1,6 +1,7 @@
 from explainerdashboard import ExplainerDashboard, ClassifierExplainer, RegressionExplainer
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, GradientBoostingRegressor
 from explainerdashboard.custom import *
+from sklearn.model_selection import RepeatedKFold
 from dash_bootstrap_components.themes import FLATLY
 
 import dash_bootstrap_components as dbc
@@ -8,6 +9,7 @@ import dash_bootstrap_components as dbc
 
 
 #Importing Libraries & Packages
+
 
 import openpyxl
 
@@ -63,8 +65,9 @@ y.head()
 
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 print(X_train.shape,y_train.shape,X_test.shape,y_test.shape)
+
 
 
 model = RandomForestRegressor(n_estimators = 400,
@@ -233,10 +236,16 @@ from dash_bootstrap_components.themes import CYBORG,PULSE,DARKLY
 db=ExplainerDashboard(explainer, [CustomModelTab, CustomModelTab1, CustomPredictionsTab,
                                CustomPredictionsTab2, CustomPredictionsTab3, CustomPredictionsTab4], 
                         title='Macroeconomic Indicator Prediction for Nigeria', header_hide_selector=False,
-                        bootstrap=CYBORG)
+                        bootstrap=CYBORG).run()
 
-db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
 
-from explainerdashboard import ExplainerDashboard
-db = ExplainerDashboard.from_config("dashboard.yaml") 
-app = db.flask_server()
+
+
+
+
+#db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
+
+#from explainerdashboard import ExplainerDashboard
+#db = ExplainerDashboard.from_config("dashboard.yaml") 
+#app = db.flask_server()
+
