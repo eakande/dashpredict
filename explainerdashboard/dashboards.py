@@ -126,7 +126,7 @@ class ExplainerTabsLayout(ExplainerComponent):
                                         children=tab.layout()) for tab in self.tabs]),
             make_hideable(
                 html.Div([
-                    html.Small("Compiled by: "),
+                    html.Small("Contact: "),
                     html.Small(html.A("CAPE Economic Research and Consulting Ltd", 
                             className="text-muted", target='_blank',
                             href="https://capeeconomicconsult.com/"))
@@ -275,7 +275,7 @@ class ExplainerPageLayout(ExplainerComponent):
                 make_hideable(
                     dbc.Col([
                         html.Div([
-                            html.Small("Compiled by: "),
+                            html.Small("Contact: "),
                             html.Small(html.A("CAPE Economic Reasearch and Consulting Ltd", 
                                     className="text-muted", target='_blank',
                                     href=" https://capeeconomicconsult.com/"))
