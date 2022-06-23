@@ -243,9 +243,9 @@ db=ExplainerDashboard(explainer, [CustomModelTab, CustomModelTab1, CustomPredict
 
 
 
-#db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
+db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
 
-#from explainerdashboard import ExplainerDashboard
-#db = ExplainerDashboard.from_config("dashboard.yaml") 
-#app = db.flask_server()
+from explainerdashboard import ExplainerDashboard
+db = ExplainerDashboard.from_config("dashboard.yaml") 
+app = db.flask_server()
 
