@@ -129,7 +129,7 @@ class ExplainerTabsLayout(ExplainerComponent):
                     html.Small("Compiled by: "),
                     html.Small(html.A("CAPE Economic Research and Consulting Ltd", 
                             className="text-muted", target='_blank',
-                            href="https://capeeconomicconsulting.com/"))
+                            href="https://capeeconomicconsult.com/"))
                 ], style={'display':'flex', 'justify-content':'flex-end', 'text-align':'right'}),
                 hide=self.hide_poweredby),
         ], fluid=self.fluid)
@@ -278,7 +278,7 @@ class ExplainerPageLayout(ExplainerComponent):
                             html.Small("Compiled by: "),
                             html.Small(html.A("CAPE Economic Reasearch and Consulting Ltd", 
                                     className="text-muted", target='_blank',
-                                    href=" https://capeeconomicconsulting.com/"))
+                                    href=" https://capeeconomicconsult.com/"))
                         ]),
                     ], md="3"), hide=self.hide_poweredby),
             ], justify="end")
