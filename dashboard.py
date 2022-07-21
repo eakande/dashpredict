@@ -29,13 +29,13 @@ from dash import Dash, callback, html, dcc, dash_table, Input, Output, State, MA
 
 
 
-#data=pd.read_csv('data_latest.csv')
+data=pd.read_csv('Data.csv')
 
 
-data = pd.read_excel('Elijah_inflation.xlsx', sheet_name="High Inflation Regime").dropna()
+#data = pd.read_excel('Elijah_inflation.xlsx', sheet_name="High Inflation Regime").dropna()
 
-X = data.drop(['Headline Inflation', 'Date', 'Core'], axis=1)
-y = data['Headline Inflation']
+X = data.drop(['Headline', 'Date'], axis=1)
+y = data['Headline']
 
 
 #values.astype('float32')
